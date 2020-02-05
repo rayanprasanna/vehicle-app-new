@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sub_activity.EnglishPhoneAuthActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        tools:ignore="UselessLeaf,UselessParent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessLeaf,UselessParent">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="Please enter your phone number."
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:background="@color/main_back"
+                tools:ignore="HardcodedText,RtlCompat" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="101dp"
+                android:gravity="center"
+                android:text="If you do not have an unassigned phone number, you will receive an SMS with a PIN number."
+                android:textSize="15sp"
+                tools:ignore="HardcodedText,RtlCompat" />
+
+            <LinearLayout
+                android:id="@+id/phone_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="180dp"
+                android:orientation="horizontal"
+                tools:ignore="RtlCompat,UselessLeaf">
+
+                <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_call"
+                    tools:ignore="ContentDescription" />
+
+                <EditText
+                    android:id="@+id/contact_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:inputType="phone"
+                    android:layout_marginHorizontal="5dp"
+                    android:hint="දුරකථන අංකය ඇතුළත් කරන්න"
+                    android:textColor="@android:color/black"
+                    android:textColorHighlight="@android:color/black"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,TextFields,UnusedAttribute" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar_call"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    tools:ignore="InefficientWeight" />-->
+                <!--<com.hbb20.CountryCodePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/country_code">
+                </com.hbb20.CountryCodePicker>-->
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/country_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:defaultCode="94"/>
+                <EditText
+                    android:id="@+id/contact_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:inputType="phone"
+                    android:layout_marginHorizontal="5dp"
+                    android:hint="Contact  number"
+                    android:textColor="@android:color/black"
+                    android:textColorHighlight="@android:color/black"
+                    android:textSize="14sp"
+                    tools:ignore="Autofill,HardcodedText,TextFields,UnusedAttribute" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar_call"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:layout_weight="1"
+                    tools:ignore="InefficientWeight" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lock_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="240dp"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                tools:ignore="RtlCompat,UselessLeaf">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_lock"
+                    tools:ignore="ContentDescription" />
+
+                <EditText
+                    android:id="@+id/verification_code"
+                    android:layout_width="231dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    android:hint="Enter your PIN"
+                    android:textColor="@android:color/black"
+                    android:inputType="number"
+                    android:textSize="14sp"
+                    tools:ignore="Autofill,HardcodedText,TextFields,UnusedAttribute" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar_verify"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:ignore="InefficientWeight" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/send_btn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="276dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/errorText"
+                android:gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/holo_orange_light"
+                android:text="Send Phone number"
+                android:textColor="@android:color/black"
+                tools:ignore="HardcodedText,RtlCompat" />
+            <TextView
+                android:id="@+id/errorText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lock_id"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="There is some error"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="invisible"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/back_1"
+    tools:context=".ServiceStationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessLeaf,UselessParent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:orientation="horizontal"
+                tools:ignore="UnusedAttribute">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/ic_brand"
+                    tools:ignore="ContentDescription" />
+                <!--<android.support.v7.widget.SearchView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/brand"
+                    android:background="@android:color/darker_gray"
+                    app:queryHint="මාතෘකාව">
+                </android.support.v7.widget.SearchView>-->
+                <SearchView
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:inputType="text"
+                    android:queryHint="මාතෘකාව"
+                    android:layout_marginLeft="25dp"
+                    android:background="@android:color/white"
+                    android:iconifiedByDefault="false"
+                    android:id="@+id/brand"
+                    tools:ignore="LabelFor,RtlHardcoded,UnusedAttribute">
+                    <requestFocus />
+                </SearchView>
+            </LinearLayout>
+        </LinearLayout>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:id="@+id/listView"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/button_border"
+            tools:ignore="UnusedAttribute">
+        </ListView>
+    </LinearLayout>
+</RelativeLayout>

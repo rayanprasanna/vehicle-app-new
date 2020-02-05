@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_2"
+    tools:context=".PostAdsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:gravity="center"
+            android:background="@color/light_grey"
+            android:textColor="@color/black"
+            android:text="ඔබට පළකිරිමට අවශ්‍ය දැන්වීම් වර්ගය තෝරා ගන්න."
+            android:textSize="15sp"
+            tools:ignore="HardcodedText,RtlCompat" />
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            tools:ignore="UselessParent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="UselessLeaf,UselessParent">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/car_advertise"
+                    android:textColor="@color/black"
+                    android:text="කාර් රථ විකිණිමට"
+                    tools:ignore="HardcodedText"
+                    android:background="@drawable/main_button_border"
+                    android:layout_margin="5dp"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/van_Bus_and_lorry_advertise"
+                    android:textColor="@color/black"
+                    android:text="වෑන් රථ,බස් රථ &amp; ලොරි රථ විකිණිමට"
+                    android:background="@drawable/main_button_border"
+                    android:layout_marginHorizontal="5dp"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/scooter_motorbike_advertise"
+                    android:textColor="@color/black"
+                    android:text="යතුරැ පැදි &amp; ස්කූටර් විකිණිමට"
+                    android:background="@drawable/main_button_border"
+                    android:layout_margin="5dp"
+                    tools:ignore="HardcodedText" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/other_vehicle_advertise"
+                    android:text="වෙනත් වාහන විකිණිමට"
+                    android:textColor="@color/black"
+                    android:background="@drawable/main_button_border"
+                    android:layout_margin="5dp"
+                    tools:ignore="HardcodedText" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/auto_part_and_service_advertise"
+                    android:textColor="@color/black"
+                    android:text="අමතර කොටස් හා සේවා"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/main_button_border"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

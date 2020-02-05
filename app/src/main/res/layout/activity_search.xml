@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_2"
+    tools:context=".main.SearchActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/search_bar"
+        android:background="@color/dark_grey">
+    </android.support.v7.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_bar"
+        android:layout_above="@id/db1_root"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/data_list_border"
+            tools:ignore="ScrollViewSize,UnusedAttribute">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/district_text"
+                android:text="District"
+                android:textAppearance="?android:attr/textAppearanceSearchResultSubtitle"
+                android:textColor="#000"
+                android:layout_marginVertical="4dp"
+                android:gravity="left|center"
+                tools:ignore="HardcodedText,RtlHardcoded,SmallSp,SpUsage,UnusedAttribute" />
+
+            <Spinner
+                android:id="@+id/district_spinner"
+                style="@style/SpinnerTheme"
+                android:layout_width="match_parent"
+                android:textColor="#000000"
+                android:layout_height="50dp">
+            </Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/brand_text"
+                android:text="Brand"
+                android:textAppearance="?android:attr/textAppearanceSearchResultSubtitle"
+                android:textColor="#000"
+                android:layout_marginVertical="4dp"
+                android:gravity="left|center"
+                tools:ignore="HardcodedText,RtlHardcoded,SmallSp,SpUsage,UnusedAttribute" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/brand_spinner"
+                android:textColor="#000000"
+                style="@style/SpinnerTheme">
+            </Spinner>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/model_text"
+                android:text="Model"
+                android:textAppearance="?android:attr/textAppearanceSearchResultSubtitle"
+                android:textColor="#000"
+                android:layout_marginVertical="4dp"
+                android:gravity="left|center"
+                tools:ignore="HardcodedText,RtlHardcoded,SmallSp,SpUsage,UnusedAttribute" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/model_spinner"
+                android:textColor="#000000"
+                style="@style/SpinnerTheme">
+            </Spinner>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/model_year_text"
+                android:text="Model Year"
+                android:textAppearance="?android:attr/textAppearanceSearchResultSubtitle"
+                android:textColor="#000"
+                android:layout_marginVertical="4dp"
+                android:gravity="left|center"
+                tools:ignore="HardcodedText,RtlHardcoded,SmallSp,SpUsage,UnusedAttribute" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/year_text"
+                android:textColor="#000"
+                android:hint="Model Year"
+                tools:ignore="HardcodedText"
+                android:inputType="text"
+                android:background="@drawable/button_border_2"
+                android:importantForAutofill="no">
+            </EditText>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/post_button"
+                android:text="Search"
+                android:background="@drawable/save_button_border"
+                android:textAppearance="?android:attr/textAppearanceSearchResultSubtitle"
+                android:textColor="#fff"
+                android:layout_marginVertical="10dp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/db1_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:layout_marginRight="4sp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                tools:ignore="RtlHardcoded,UnusedAttribute,UselessParent">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/search"
+                    android:layout_marginLeft="4sp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/search"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add"
+                    android:layout_marginLeft="4sp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/add"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sign"
+                    android:layout_marginLeft="4sp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/en"
+                    tools:ignore="ContentDescription" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

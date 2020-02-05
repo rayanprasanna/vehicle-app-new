@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/new_ads_activity"
+    tools:context=".EnglishNewPostAdsActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        tools:ignore="UselessLeaf,UselessParent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/v_ad_title"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:gravity="center"
+                android:background="@color/light_grey"
+                android:textColor="@color/black"
+                android:text="Select the type of ad you want to post."
+                android:textSize="15sp"
+                tools:ignore="HardcodedText,RtlCompat" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/v_ad_types"
+                style="@style/SpinnerTheme">
+            </Spinner>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/v_enter_title"
+                android:background="@android:color/darker_gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text="Include data"
+                tools:ignore="HardcodedText" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/district_layout"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/v_ad_district_text"
+                    android:text="Location"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    android:layout_marginVertical="4dp"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded,SmallSp,SpUsage,UnusedAttribute" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/v_ad_district"
+                    style="@style/SpinnerTheme">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/city_layout"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/v_ad_city_text"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="City"
+                    android:layout_marginVertical="4dp"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded,SmallSp,SpUsage,UnusedAttribute" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/v_ad_city"
+                    style="@style/SpinnerTheme">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/select_image_layout"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:id="@+id/v_ad_images_description"
+                    android:background="@android:color/darker_gray"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="Enter at least one photo (no more than 5)"
+                    tools:ignore="HardcodedText" />
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_border"
+                    android:id="@+id/v_ad_recycler_view">
+                </android.support.v7.widget.RecyclerView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/select_image_button_layout"
+                    android:gravity="center"
+                    tools:ignore="UnusedAttribute">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/v_ad_image_btn"
+                        android:text="Select the photo"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/camera_button_border"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/v_ad_image_error"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:text="At least you have to include one photo."
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/brand_layout"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="Brand"
+                    android:layout_marginVertical="4dp"
+                    android:id="@+id/v_ad_brand_text"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/v_ad_brand"
+                    style="@style/SpinnerTheme">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/model_layout"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:layout_marginVertical="4dp"
+                    android:text="Model"
+                    android:id="@+id/v_ad_model_name"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/v_ad_model"
+                    style="@style/SpinnerTheme">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/goods_type_layout"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="Vehicle Type"
+                    android:layout_marginVertical="4dp"
+                    android:id="@+id/v_ad_goods_type_text"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/v_ad_goods_type"
+                    style="@style/SpinnerTheme">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/vehicle_type_1_layout"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="Vehicle Type"
+                    android:layout_marginVertical="4dp"
+                    android:id="@+id/v_ad_vehicle_type_text_1"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/v_ad_vehicle_type_1"
+                    style="@style/SpinnerTheme">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/vehicle_type_2_layout"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/v_ad_vehicle_type_text2"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="වාහන වර්ගය"
+                    android:layout_marginVertical="4dp"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+                <!--<EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/v_ad_vehicle_type_2"
+                    android:inputType="text"
+                    android:background="@drawable/button_border"
+                    android:hint="උදා: ස්කූටර් හෝ යතුරු පැදි"
+                    tools:ignore="Autofill,HardcodedText,TextFields" />-->
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/v_ad_vehicle_type_2"
+                    style="@style/SpinnerTheme">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/service_layout"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="Vehicle Type"
+                    android:layout_marginVertical="4dp"
+                    android:id="@+id/v_ad_service_text"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/v_ad_service"
+                    style="@style/SpinnerTheme">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/title_layout"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/v_ad_title_name"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="Title"
+                    android:layout_marginVertical="4dp"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/v_ad_vehicle_title"
+                    android:inputType="text"
+                    android:background="@drawable/button_border"
+                    android:hint="title"
+                    tools:ignore="Autofill,HardcodedText,TextFields" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/trim_layout"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/v_ad_trim_name"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="Trim / Edition"
+                    android:layout_marginVertical="4dp"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/v_ad_trim"
+                    android:inputType="text"
+                    android:background="@drawable/button_border"
+                    android:hint="Trim / Edition"
+                    tools:ignore="HardcodedText,TextFields" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/model_year_layout"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/v_ad_model_year_text"
+                    android:text="Model Year"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/button_border"
+                    android:textColor="@color/black"
+                    android:id="@+id/v_ad_model_year"
+                    android:hint="Model Year"
+                    android:inputType="number"
+                    tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/condition_layout"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/v_ad_condition_text"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="Condition"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/v_ad_radio_group">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New"
+                        android:checked="true"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:id="@+id/v_ad_new_radio"
+                        android:onClick="onRadioButtonClicked"
+                        tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Used"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:id="@+id/v_ad_used_radio"
+                        android:onClick="onRadioButtonClicked"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reconditioned"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:id="@+id/v_ad_recondition_radio"
+                        android:onClick="onRadioButtonClicked"
+                        tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/mileage_layout"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/v_ad_mileage_text"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    android:text="Mileage km"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:id="@+id/v_ad_mileage"
+                    android:textColor="@color/black"
+                    android:hint="Mileage"
+                    tools:ignore="HardcodedText,LabelFor,TextFields"
+                    android:background="@drawable/button_border"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/body_type_layout"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/v_ad_body_type_text"
+                    android:textColor="@color/green"
+                    android:text="Body Type"
+                    android:textSize="12sp"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/v_ad_body_type"
+                    style="@style/SpinnerTheme">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/transmission_layout"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="Transmission"
+                    android:id="@+id/v_ad_transmission_text"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/v_ad_transmission"
+                    style="@style/SpinnerTheme">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/fuel_layout"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:textColor="@color/green"
+                    android:text="Fuel Type"
+                    android:textSize="12sp"
+                    android:id="@+id/v_ad_fuel_text"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/v_ad_fuel"
+                    style="@style/SpinnerTheme">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/capacity_layout"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    android:text="Engine Capacity (cc)"
+                    android:id="@+id/v_ad_capacity_text"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:minLines="2"
+                    android:lines="3"
+                    android:maxLines="4"
+                    android:id="@+id/v_ad_capacity"
+                    android:textColor="@color/black"
+                    android:hint="Capacity"
+                    android:background="@drawable/button_border"
+                    tools:ignore="HardcodedText,LabelFor,TextFields" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/description_layout"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    android:text="Description"
+                    android:id="@+id/v_ad_description_text"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"
+                    android:lines="3"
+                    android:maxLines="4"
+                    android:id="@+id/v_ad_description"
+                    android:textColor="@color/black"
+                    android:hint="Description"
+                    android:background="@drawable/button_border"
+                    tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/price_layout"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="Price"
+                    android:id="@+id/v_ad_price_text"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/v_ad_price"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:hint="Price (රැ)"
+                    android:background="@drawable/button_border"
+                    tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/service_type_layout"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="Service Type"
+                    android:id="@+id/service_text"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/service_spinner"
+                    style="@style/SpinnerTheme">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/com_name_layout"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="Service Station Name"
+                    android:id="@+id/service_station_text"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/service_station"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:hint="Name"
+                    android:background="@drawable/button_border"
+                    tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/com_address_layout"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="Address Of Service Station"
+                    android:id="@+id/service_station_address_text"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/service_station_address"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:hint="Address"
+                    android:background="@drawable/button_border"
+                    tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="5dp"
+                tools:ignore="UnusedAttribute">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:id="@+id/v_ad_your_details"
+                    android:textColor="@color/black"
+                    android:text="Contact Details:"
+                    android:background="@android:color/darker_gray"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:id="@+id/v_ad_your_name"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="Name"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:id="@+id/v_ad_name_text"
+                    tools:ignore="RtlHardcoded" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginVertical="10dp"
+                    android:id="@+id/your_details_layout">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:textColor="@color/green"
+                        android:id="@+id/v_ad_your_telephone"
+                        android:text="Phone number"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <com.hbb20.CountryCodePicker
+                            android:id="@+id/country_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:defaultCode="94"
+                            android:layout_margin="5dp"/>
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/button_border_2"
+                            android:id="@+id/v_ad_telephone_num"
+                            android:gravity="left|center"
+                            android:inputType="number"
+                            tools:ignore="Autofill,LabelFor,RtlHardcoded" />
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@drawable/camera_button_border"
+                        android:text="To include the phone number"
+                        android:textColor="@color/black"
+                        android:id="@+id/v_ad_contact"
+                        android:layout_marginBottom="5dp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:background="@drawable/camera_button_border"
+                android:id="@+id/v_ad_save"
+                android:text="Post Ad"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

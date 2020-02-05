@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">වාහන</string>
+    <string name="facebook_app_id">526587801137707</string>
+    <string name="facebook_protocol_schema">fb526587801137707</string>
+    <string name="banner_ad_id">ca-app-pub-3505600525587058/4940461608</string>
+    <string name="inst_ad_id">NOT_SETUP</string>
+    <string name="ads_app_id">ca-app-pub-3505600525587058~4010523316</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="notification_success">Picture uploaded.</string>
+    <string name="notification_progress" tools:ignore="TypographyEllipsis">Uploading...</string>
+    <string name="notification_share_link">Picture link</string>
+    <string name="notification_fail">Upload failed.</string>
+    <string name="sms_dis_msg">ඔබේ දැන්වීම් SMS මගින් පල කර ගැනීමට කැමතිද?</string>
+    <string name="string_internet_connection_not_available">Internet Connection Not Available</string>
+    <string name="string_some_thing_wrong">Something went wrong.</string>
+    <string name="internal_storage">Internal storage</string>
+    <string name="chooser_title">Choose Files</string>
+</resources>

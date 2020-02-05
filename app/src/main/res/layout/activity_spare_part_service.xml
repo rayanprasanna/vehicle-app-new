@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/spare_part_activity"
+    tools:context=".sub_activity.CarAdsActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        tools:ignore="UselessLeaf,UselessParent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/darker_gray"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text="දත්ත ඇතුළත් කරන්න"
+                tools:ignore="HardcodedText" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/location_district_text"
+                    android:text="ප්‍රදේශය"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    android:layout_marginVertical="4dp"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded,SmallSp,SpUsage,UnusedAttribute" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/select_location_district_5"
+                    style="@style/SpinnerTheme">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/location_city_text"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="නගරය"
+                    android:layout_marginVertical="4dp"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded,SmallSp,SpUsage,UnusedAttribute" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/select_location_city_5"
+                    style="@style/SpinnerTheme">
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:background="@android:color/darker_gray"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:text="අවම වශයෙන් ඡායාරෑප එකක් පමණක් ඇතුලත් කරන්න (උපරිම 5ක් පමණයි)"
+                    tools:ignore="HardcodedText" />
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/button_border"
+                    android:id="@+id/recycler_view_5">
+                </android.support.v7.widget.RecyclerView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    tools:ignore="UnusedAttribute">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/image_select_btn_5"
+                        android:text="ඡායාරූපය තෝරා ගන්න"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="5dp"
+                        android:background="@drawable/camera_button_border"
+                        tools:ignore="ButtonStyle,HardcodedText" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/error"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:text="අවම තරමේ ඔබ එක් ඡායාරෑපයක්වත් ඇතුලත් කළ යුතු වේ."
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="භාණ්ඩ වර්ගය"
+                    android:layout_marginVertical="4dp"
+                    android:id="@+id/vehicle_type_2"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/select_service_type_1"
+                    style="@style/SpinnerTheme">
+                </Spinner>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/trim_name_1"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="මාතෘකාව"
+                    android:layout_marginVertical="4dp"
+                    android:gravity="left|center"
+                    tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/title_2"
+                    android:background="@drawable/button_border"
+                    android:hint="මාතෘකාව"
+                    android:inputType="text"
+                    tools:ignore="Autofill,HardcodedText,TextFields" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    android:text="විස්තර"
+                    android:id="@+id/description_text_1"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"
+                    android:lines="3"
+                    android:maxLines="4"
+                    android:id="@+id/description_5"
+                    android:textColor="@color/black"
+                    android:hint="විස්තර (ඉතාම කෙටියෙන් සඳහන් කරන්න)"
+                    android:background="@drawable/button_border"
+                    tools:ignore="HardcodedText,LabelFor,TextFields" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="මිල"
+                    android:id="@+id/price_text_1"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/price_5"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:hint="මිල (රැ)"
+                    android:background="@drawable/button_border"
+                    tools:ignore="Autofill,HardcodedText,LabelFor,TextFields" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="5dp"
+                tools:ignore="UnusedAttribute">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="ඔබේ විස්තර:"
+                    android:background="@android:color/darker_gray"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:textSize="12sp"
+                    android:textColor="@color/green"
+                    android:text="නම"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:id="@+id/name_text_5"
+                    tools:ignore="RtlHardcoded" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/button_border">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="දුරකතන අංකය"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:id="@+id/telephone_num_5"
+                        android:gravity="left|center"
+                        tools:ignore="RtlHardcoded" />
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="@drawable/camera_button_border"
+                        android:text="දුරකතන අංකය ඇතුළත් කරන්න"
+                        android:textColor="@color/black"
+                        android:id="@+id/contact_5"
+                        android:layout_marginBottom="5dp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:background="@drawable/camera_button_border"
+                android:id="@+id/save_5"
+                android:text="ඔබේ දැන්විම පළ කරන්න"
+                android:textColor="@color/black"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

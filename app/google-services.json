@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "467283211217",
+    "firebase_url": "https://vehiclesaleapp.firebaseio.com",
+    "project_id": "vehiclesaleapp",
+    "storage_bucket": "vehiclesaleapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467283211217:android:6ff00b1cd0481d5d",
+        "android_client_info": {
+          "package_name": "com.universl.hp.vehicle_sale_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467283211217-0128vnu9n0hpj1q4np3i2itk941brspl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.universl.hp.vehicle_sale_app",
+            "certificate_hash": "b7ad86d7d45cc3ff74ef2b4efcf66ef08e534096"
+          }
+        },
+        {
+          "client_id": "467283211217-svr9c6kagpkj69oktqnivn5sfv1qm97m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARDK6XkwvBNbcKdKVHt0IUrJs578gMOz4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467283211217-svr9c6kagpkj69oktqnivn5sfv1qm97m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

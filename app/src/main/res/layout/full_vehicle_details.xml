@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        tools:ignore="UselessParent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            tools:ignore="UselessLeaf">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:textStyle="bold"
+                android:layout_marginVertical="5dp"
+                tools:ignore="UnusedAttribute"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/price"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:background="@android:color/holo_orange_dark"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:id="@+id/location_text"
+                    android:text="පිහිටීම :"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:id="@+id/location"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:id="@+id/brand_text"
+                    android:text="වෙළඳ නාමය :"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:id="@+id/brand"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:id="@+id/model_text"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:text="මාදිලිය :"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:id="@+id/model"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:id="@+id/year_text"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:text="නිෂ්පාදිත වර්ෂය :"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:id="@+id/year"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/condition_text"
+                    android:layout_marginVertical="5dp"
+                    android:text="අන්දම :"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:id="@+id/condition"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/transmission_text"
+                    android:layout_marginVertical="5dp"
+                    android:text="ගියර පද්ධති :"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:id="@+id/transmission"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:id="@+id/body_text"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:text="ඛඳ වර්ගය :"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:id="@+id/body_type"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:id="@+id/fuel_text"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:text="ඉන්ධන වර්ගය :"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:id="@+id/fuel"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:id="@+id/capacity_text"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:text="එන්ඡිමේ ධාරිතාව :"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:id="@+id/capacity"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:id="@+id/mileage_text"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:text="ධාවනය කර ඇති දුර :"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:id="@+id/mileage"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/description_text"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginVertical="5dp"
+                    android:text="වැඩි විස්තර :"
+                    android:textColor="@android:color/holo_blue_dark"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/description"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
